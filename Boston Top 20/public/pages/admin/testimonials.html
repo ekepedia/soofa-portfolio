@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col col-sm-12">
+        <h2>Testimonials <a class="pull-right" href="/admin/blog/new"><button class="btn">New</button></a></h2>
+        </br></br>
+        <table class="display" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Message</th>
+                <th>Agent</th>
+                <th>Action Items</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="t in testimonials">
+                <td>{{t.name}}</td>
+                <td>{{t.text}}</td>
+                <td>{{t.agentId.name}}</td>
+                <td><a class="col col-sm-6 btn" href="" ng-click="approve(t._id)">Approve</a><a class="col col-sm-6" href="" ng-click="delete(t._id)"><span class="pull-right btn btn-danger">Delete</span></a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

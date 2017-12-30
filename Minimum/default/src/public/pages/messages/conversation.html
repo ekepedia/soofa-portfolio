@@ -1,0 +1,67 @@
+<script src="../../js/controllers/UserController.js"></script><h4 class="title"><span class="back"><a href="/admin/messages/">Conversations</a> //</span> <span class="back"><a href="/admin/messages/{{receiver.user_id}}">{{receiver.name}}</a> //</span> {{sender.name}}</h4>
+
+<h3 style="margin-bottom: 50px">Conversations</h3>
+
+<div style="position: fixed; left: 50%" class="loading" ng-if="!swimlanes"></div>
+<div style="text-align: center; display: none; font-size: 25px" class="no-video-messages" ng-if="!swimlanes">
+    No Video Messages :(
+</div>
+
+
+<div style="margin-top: 50px;" tabindex='-1' class="modal fade" tabindex="-1" role="dialog" id="video-player">
+    <div class="modal-dialog" role="document" style="background-color: rgba(0,0,0,.5)">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div>
+                    <div style="height: 600px; margin: auto; background-image: url('/img/blurredface.png'); background-position: center">
+                        <div style="padding: 0" class="col-xs-6">
+                            <video
+                                    src="{{safe_url(modal_data.mov_url)}}"
+                                    height="600" width="337.5"
+                                    type="application/x-mpegURL"
+                                    autoplay
+                                    style="margin: 0 auto"
+                                    id="modal-video"
+                            >
+                        </div>
+                        <div style="padding: 0" class="col-xs-6">
+                                <div class="row">
+                                    <div class="video-image" style="float: left">
+                                        <img style="margin-left: 20px;" height="70px" class="img-circle" src="{{modal_data.sender_metadata.photo_url}}"/>
+                                    </div>
+                                    <div style="float: left">
+                                        <div class="video-text">
+                                            {{modal_data.sender_metadata.name}}<br/>
+                                            {{modal_data.sender_metadata.company}}
+                                        </div>
+                                    </div>
+                                    <div class="video-time" style="float: right">
+                                        {{pretty(modal_data.created_at)}}
+                                    </div>
+                                </div>
+                            <div class="video-text">
+                                <span style="font-size: 12px; color: grey">{{message_date(modal_data.created_at)}} | {{pretty(modal_data.created_at)}}</span> <br/>
+                                {{modal_data.speech_text || "No text"}}
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div ng-repeat="swimlanes in all_swimlanes" ng-if="swimlanes">
+    <h2>Week Of {{beginning_week_date(messages[swimlanes[0].message_index].created_at)}}</h2>
+    <div class="swimlane-area" >
+        <div class="swimlane-container">
+            <div class="swimlane-holder" ng-repeat="swimlane in swimlanes">
+                <div data-index="{{swimlane.swimlane_index}}" ng-class="{'swimlane-unwatched': unwatched_swimlane(swimlane.message_index)}" ng-click="start_modal(swimlane.message_index)" class="{{swimlane.type}} {{swimlane.origin}} {{current_swimlane(swimlane.message_index)}} {{selected_swimlane_index(swimlane.swimlane_index)}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

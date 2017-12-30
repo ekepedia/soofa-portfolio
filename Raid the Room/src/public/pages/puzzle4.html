@@ -1,0 +1,48 @@
+<h3 class="rtr-puzzle-title">Puzzle 4</h3>
+
+
+<div ng-show="!is_ready">
+    <h1>Have you used your key from the activity yet? </h1>
+    <br/>
+    <h2>Click next when you used your key from the activity.</h2>
+    <br/>
+    <button class="btn rtr-btn" ng-click="ready()"> Next </button>
+</div>
+
+<div ng-show="is_ready">
+
+    <h1>Type in the answer to the Riddle for the secret letters you need to decrypt.</h1>
+    <br/>
+
+    <input class="rtr-text-field" ng-model="answer_1" type="text">
+    <button class="btn rtr-btn" ng-click="submit_1()"> Submit </button>
+    <h2 class="rtr-answer" ng-if="puzzle_4a_answers">Answer: {{puzzle_4a_answers}}</h2>
+
+    <br/>
+    <br/>
+
+    <h1>Type in all 3 answers for the Magic Square in the order Green, Blue, and Orange from left to right. </h1>
+    <br/>
+    <br/>
+
+    <input style="background-color: yellowgreen" class="rtr-text-field rtr-text-field-mini" ng-model="answer_2g" type="text">
+    <input style="background-color: dodgerblue" class="rtr-text-field-mini rtr-text-field" ng-model="answer_2b" type="text">
+    <input style="background-color: darkorange" class="rtr-text-field-mini rtr-text-field" ng-model="answer_2o" type="text">
+
+    <button class="btn rtr-btn" ng-click="submit_2()"> Submit </button>
+    <h2 class="rtr-answer" ng-if="puzzle_4b_answers">Answer: <span style="color: yellowgreen">P</span> <span style="color: dodgerblue">T</span> <span style="color: darkorange" >K</span> </h2>
+
+    <br/>
+    <h1>
+        Directions: Once you've decrypted the secret word, enter it in the space below and then you will be able to click on "Next Puzzle" to move onto the next answer page. </h1>
+    <br/>
+
+    <input class="rtr-text-field" ng-model="answer_3" type="text">
+
+    <br/>
+    <h3 ng-show="can_proceed_1 && can_proceed_2 && can_proceed_3" style="color:limegreen">Done <span style="font-size: 20px;" class="glyphicon glyphicon-ok"></span></h3>
+    <br/>
+    <button class="btn rtr-btn" ng-click="back()"> back </button>
+
+    <button class="btn rtr-btn" ng-click="next()"> next </button>
+</div>

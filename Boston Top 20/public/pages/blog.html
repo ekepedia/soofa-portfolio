@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col col-sm-9">
+        <div ng-bind-html="toHtml(blog)"></div>
+    </div>
+    <div class="col col-sm-3">
+        <h3><b>Recent Posts</b></h3>
+        <div>
+            <h5 ng-repeat="b in blogs | limitTo:10"><a href="/blog/{{b.url}}">&gt; {{b.title}}</a></h5>
+        </div>
+    </div>
+</div>

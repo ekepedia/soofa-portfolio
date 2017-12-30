@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h2 class="title">Companies</h2>
+    </div>
+</div>
+<br/>
+<br/>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-3">
+                <h5>
+                    <a href="/admin/companies/new">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ADD A COMPANY
+                    </a>
+                </h5>
+            </div>
+        </div>
+        <div id="table" style="display: none">
+            <table datatable="ng" dt-options="dtOptions" class="table table-responsive" ng-if="companies">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Company</th>
+                    <th>Domain</th>
+                    <th>Users</th>
+                    <th>Messages</th>
+                    <th>Created</th>
+                    <th>Updated</th>
+                    <td></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="company in companies">
+                    <th scope="row">{{company.company_id | limitTo:5:1}}</th>
+                    <td>
+                        <a href="/admin/companies/view/{{company.company_id}}">
+                            {{company.name}}
+                        </a>
+                    </td>
+                    <td>{{company.domain}}</td>
+                    <td>{{count(company.users)}}</td>
+                    <td>{{company.messages || 0}}</td>
+                    <td>{{pretty(company.created_at)}}</td>
+                    <td>{{pretty(company.updated_at)}}</td>
+                    <td>
+                        <a href="/admin/companies/edit/{{company.company_id}}">
+                            Edit
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="loading" ng-if="!companies" style="margin-bottom: 200px">
+        </div>
+    </div>
+
+    <!-- Table -->
+
+</div>

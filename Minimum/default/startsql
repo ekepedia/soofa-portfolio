@@ -1,0 +1,5 @@
+#!/bin/bash
+echo killing mysql
+pkill mysql
+echo starting cloudsql 
+./cloud_sql_proxy -instances=minimum-backend:us-east4:minimum-ai=tcp:3306

@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col col-xs-12">
+        <h2><strong>Welcome, {{user.name}}</strong></h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-sm-3">
+        <img class="img img-raised img-rounded" style="max-width: 100%" src="{{user.url}}">
+        <br/>
+        <br/>
+        <p>Upload Image: </p>
+        <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+
+    </div>
+    <div class="col col-sm-9">
+        <div style="margin-top: 10px"  class="card">
+            <div class="content">
+                <h2>Edit About Me</h2>
+                <div class="form-group">
+                    <label for="about">About:</label>
+                    <textarea class="form-control" rows="5" id="about" ng-model="user.about"></textarea>
+                </div>
+                <button ng-click="save()" class="btn">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).on('ready', function() {
+        $("#input-4").fileinput({showCaption: false});
+    });
+</script>
+

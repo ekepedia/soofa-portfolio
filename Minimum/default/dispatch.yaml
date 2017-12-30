@@ -1,0 +1,13 @@
+dispatch:
+  # Default service serves simple hostname request.
+  - url: "minimum-backend.appspot.com/"
+    service: default
+
+  # Message traffic
+  - url: "*/v0.0/threads*"
+    service: messages
+
+  # Message traffic
+  - url: "*/v0.0/feed*"
+    service: messages
+

@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h2 class="title">Contacts</h2>
+    </div>
+</div>
+<br/>
+<br/>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body">
+        <table datatable="ng" dt-options="dtOptions" class="table table-responsive" ng-if="contacts">
+        <div id="table" style="display: none">
+            <table datatable="ng" dt-options="dtOptions" class="table table-responsive" ng-if="contacts">
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Contacts</th>
+                <td></td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="contact in contacts" ng-if="contact.user">
+                <th scope="row">{{contact.user_id | limitTo:5}}</th>
+                <td>{{contact.user.name}}</td>
+                <td>{{contact.count}}</td>
+                <td>
+                    <a href="/admin/contacts/edit/{{contact.user_id}}">
+                        View
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="loading" ng-if="!contacts" style="margin-bottom: 200px">
+        </div>
+    </div>
+
+    <!-- Table -->
+
+</div>

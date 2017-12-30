@@ -1,0 +1,62 @@
+#share {
+    min-height: 728px;
+    padding-top: 110px;
+    padding-bottom: 120px;
+}
+
+#share h1,
+#share p {
+    text-align: center;
+}
+
+#share h1{
+    font-size: 18.62px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+#share p {
+    margin-top: 20px;
+    line-height: 30px;
+    margin-bottom: -10px;
+}
+
+#share p span{
+   font-family: "ProximaNovaSemibold";
+}
+
+#share .row-1{
+    max-width: 750px;
+    margin: auto;
+    height: auto;
+}
+
+#options {
+    /*max-width: 1064px;*/
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 33px;
+    margin-top: 91px;
+}
+
+#image-holder {
+    max-width: 90%;
+    margin: auto;
+}
+
+#image-holder-2 {
+    max-width: 90%;
+    margin: auto;
+    margin-top: -151px;
+    margin-bottom: 20px;
+}
+
+img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

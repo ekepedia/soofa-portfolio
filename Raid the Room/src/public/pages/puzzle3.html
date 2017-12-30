@@ -1,0 +1,27 @@
+
+<h3 class="rtr-puzzle-title">Puzzle 3</h3>
+<div ng-show="!is_ready">
+    <h1>You've just reached your activity challenge!</h1>
+    <br/>
+    <h2>Click next when you complete the activity to enter in your password.</h2>
+    <br/>
+    <button class="btn rtr-btn" ng-click="ready()"> Next </button>
+</div>
+
+<div ng-show="is_ready">
+
+    <h1>Type in the secret password that you got from completing your activity. </h1>
+    <br/>
+
+    <input class="rtr-text-field" ng-model="answer_1" type="text">
+    <button class="btn rtr-btn" ng-click="submit_1()"> Submit </button>
+
+    <h2 class="rtr-answer" ng-if="puzzle_3_answers">Answer: {{puzzle_3_answers}}</h2>
+
+    <br/>
+    <h3 ng-show="can_proceed_1" style="color:limegreen">Done <span style="font-size: 20px;" class="glyphicon glyphicon-ok"></span></h3>
+    <br/>
+    <button class="btn rtr-btn" ng-click="back()"> back </button>
+
+    <button class="btn rtr-btn" ng-click="next()"> next </button>
+</div>

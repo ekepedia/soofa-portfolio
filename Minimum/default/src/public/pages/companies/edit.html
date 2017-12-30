@@ -1,0 +1,60 @@
+<h4 class="title"><span class="back"><a href="/admin/companies">Companies</a> // </span>EDIT COMPANY</h4>
+
+<form class="form-horizontal" enctype="multipart/form-data">
+    <div ng-class="{'has-success': company_is_valid, 'has-error': !company_is_valid}" class="form-group has-feedback">
+        <label for="inputEmail3" class="col-sm-3 control-label">COMPANY NAME:</label>
+        <div class="col-sm-6">
+            <input ng-model="name" ng-change="valid_company()" type="text" class="form-control" id="inputEmail3" placeholder="">
+            <span ng-if="company_is_valid" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            <span ng-if="!company_is_valid" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+        </div>
+    </div>
+    <div ng-class="{'has-success': domain_is_valid, 'has-error': !domain_is_valid}" id="company-url" class="form-group has-feedback">
+        <label for="inputEmail3" class="col-sm-3 control-label">COMPANY URL:</label>
+        <div class="col-sm-6">
+            <input ng-model="domain" ng-change="valid_domain()" type="text" class="form-control" id="inputEmail3" placeholder="">
+            <span ng-if="domain_is_valid" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            <span ng-if="!domain_is_valid" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+            <p style="font-size: 10px;">{{company_id}}</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">COMPANY LOGO:</label>
+        <div class="col-sm-6">
+            <input type="file" fileread="logo" onchange="angular.element(this).scope().uploadFile(this.files)" name="logo">
+        </div>
+        <div class="col-sm-3">
+            <p style="text-align: center">Preview</p>
+            <img src="{{logo || 'http://www.drodd.com/images14/black11.jpg'}}" style="width: 150px; margin: auto; margin-top: 50px" class="img-responsive img-circle">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+            <button ng-disabled="!logo || !name || !domain ||!domain_is_valid || !company_is_valid" ng-click="update()" class="btn btn-default">Save Company</button>
+            <a href="/admin/companies"><button class="btn btn-danger">Cancel</button></a>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">COMPANY USERS ({{count(users)}}):</label>
+        <div class="col-sm-6">
+            <div class="col-xs-12">
+                <div class="col-sm-6 col-md-6 col-xs-6" ng-repeat="(user_id, user) in users" style="margin-top: 30px">
+                    <a href="/admin/users/edit/{{user_id}}">
+                        <div class="col-xs-4">
+                            <img class="media-object img-responsive img-circle" src="{{user.photo_url}}" alt="...">
+                            <div class="admin" ng-if="admin(user.user_id)">Admin</div>
+                        </div>
+                        <div class="col-xs-8">
+                            <p class="name">{{user.name}}</p>
+                            <p class="company">{{user.company}}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

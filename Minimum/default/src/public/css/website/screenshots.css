@@ -1,0 +1,7 @@
+#screenshots {
+    height: 728px;
+
+    background: #656c7c url(/img/screenshots.png) no-repeat;
+    background-size: 1850px auto;
+    background-position: top -70px center;
+}

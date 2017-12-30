@@ -1,0 +1,34 @@
+<h1>Boston Top 20 Blog</h1>
+<div class="row">
+    <div class="col col-sm-9">
+        <div class="col col-sm-4" ng-repeat="b in blogs | startFrom:currentPage*pageSize | limitTo:pageSize">
+            <div style="margin-top: 30px; height: 250px; "  class="card">
+                <a href="/blog/{{b.url}}">
+                    <div class="content" style="margin-bottom: 5px">
+                        <h4 style="margin-top: 10px"><strong>{{b.title.substring(0, (b.title.length > 30 ? 30 : b.title.length)) + (b.title.length > 30 ? ' . . .' : '')}}</strong></h4>
+                        <p class="date">{{toDate(b.date)}}</p>
+                        <p ng-bind-html="toHtml(b.text.substring(0, (b.text.length > 150 ? 150 : b.text.length)) + (b.text.length > 150 ? ' . . .' : ''))"></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col col-sm-3">
+        <h3><b>Recent Posts</b></h3>
+        <div>
+            <h5 ng-repeat="b in blogs | limitTo:10"><a href="/blog/{{b.url}}">&gt; {{b.title}}</a></h5>
+        </div>
+    </div>
+</div>
+</br>
+<div class="row">
+    <div class="col col-xs-12">
+        <button class="btn" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+            Previous
+        </button>
+        {{currentPage+1}} / {{numberOfPages()}}
+        <button class="btn" ng-disabled="currentPage >= blogs.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+            Next
+        </button>
+    </div>
+</div>

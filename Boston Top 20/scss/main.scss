@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+$font: 'Open Sans', sans-serif;
+$standard_size: 15px;
+$heading_size: 30px;
+$title_size: 50px;
+$blue: #588cf3;
+
+.blue {
+  color: $blue;
+}
+
+.standard-text {
+  font-family: $font;
+  font-size:   $standard_size;
+  font-weight: 300;
+}
+
+.standard-heading {
+  @extend .standard-text;
+  font-size: $heading_size;
+  font-weight: 400;
+
+}
+
+.standard-title  {
+  @extend .standard-text;
+  font-size: $title_size;
+
+}
+
+.agent-card {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 135px;
+
+  .circle {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    img {
+      box-shadow:0 0 8px 0 black;
+      width:100%
+    }
+  }
+
+  .agent-name {
+    @extend .standard-text;
+    font-size: 22px;
+    line-height: 30px;
+    margin-top: 10px;
+  }
+
+  .rank {
+    font-weight: 700;
+  }
+}

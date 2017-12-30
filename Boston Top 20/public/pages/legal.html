@@ -1,0 +1,117 @@
+<div class="single-content">
+    <h1 class="entry-title">Legal Services</h1>
+    <form ng-submit="submit()">
+        <p>Let Boston Top 20 help you locate a real estate attorney. Fill out the form below and one of our attorney partners will get back to you.</p>
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Name (required)</label>
+                    <input type="text" class="form-control" required>
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Email (required)</label>
+                    <input type="text" class="form-control" required>
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Phone (required)</label>
+                    <input type="text" class="form-control" required>
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Where is the Property?</label>
+                    <input type="text" class="form-control">
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3 form-group">
+                <label for="months">Property Type</label>
+                <select class="form-control" id="months" ng-model="months">
+                    <option value="Single">Single</option>
+                    <option value="Multi-Family">Multi-Family</option>
+                    <option value="Condo">Condo</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3 form-group">
+                <label for="months">Occupancy</label>
+                <select class="form-control" id="months" ng-model="months">
+                    <option value="Single">Owner Occupied</option>
+                    <option value="Multi-Family">Second Home</option>
+                    <option value="Condo">Investment</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Purchase price or home appraisal value?</label>
+                    <input type="text" class="form-control">
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3 form-group">
+                <label for="months">Transaction Type</label>
+                <select class="form-control" id="months">
+
+                    <option value="Purchase">Purchase</option>
+                    <option value="Refinance">Refinance</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Loan Amount Requested</label>
+                    <input type="text" class="form-control">
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3 form-group">
+                <label for="months">Product Type</label>
+                <select class="form-control" id="months">
+                    <option value="Multi-Family">Fixed</option>
+                    <option value="Condo">ARM</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating">
+                    <label class="control-label">When do you need to close? </label>
+                    <input type="text" class="datepicker form-control" value="mm/dd/yyy">
+                    <span class="material-input"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Additional information we should know:</label>
+                    <textarea class="form-control" rows="5"></textarea>
+                    <span class="material-input"></span>
+                </div>
+            </div>
+        </div>
+        <button class="btn" type="submit">Send</button>
+    </form>
+</div>
+
+<script>
+    $('.datepicker').datepicker()
+</script>

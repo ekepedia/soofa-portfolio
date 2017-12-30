@@ -1,0 +1,68 @@
+<div class="text-center center row">
+    <a href="/find/agents">
+        <img class="text-center center img img-responsive  " src="/img/findagent.png" alt="" style="z-index: 1;margin-top: 30px; margin-left: auto;margin-right: auto;text-align: center;">
+    </a>
+</div>
+<br>
+<div class="row">
+    <h1 class="text-center">Why Boston Top 20?</h1>
+    <br/>
+    <div class="col col-sm-4 text-center">
+        <i style="font-size: 200px;" class="material-icons blue">speaker_notes</i>
+        <h3 class="standard-heading">Relevant Data</h3>
+
+    </div>
+    <div class="col col-sm-4 text-center">
+        <i style="font-size: 200px;" class="material-icons blue">alarm</i>
+        <h3 class="standard-heading">Speedy Results</h3>
+    </div>
+    <div class="col col-sm-4 text-center">
+        <i style="font-size: 200px;" class="material-icons blue">cached</i>
+        <h3 class="standard-heading">Constantly Updated</h3>
+
+    </div>
+    <div class="col col-sm-12 text-center">
+        <br/>
+        <br/>
+        <a href="/how-it-works">
+            <button style="font-size: 20px" class="btn btn-round standard-heading">Read More</button>
+        </a>
+        <br/>
+        <br/>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col col-sm-4">
+        <h3 class="standard-heading">Boston’s Top 20</h3>
+        <p class="standard-text">Boston’s Top 20 was created as a tool for Massachusetts’ top-selling real estate professionals to use as an unbiased means of re-marketing their achievements to their customers, potential customers, and referral partners. Agents are listed and ranked on a monthly basis according to their total residential sales volume closed within Massachusetts as reported by various third parties and public records. Read More
+        </p>
+    </div>
+    <div class="col col-sm-4"><h3 class="standard-heading">Recent Posts</h3>
+        <div>
+            <p class="standard-text" ng-repeat="b in blogs | limitTo:10"><a href="/blog/{{b.url}}">&gt; {{b.title}}</a></p>
+        </div></div>
+    <div class="col col-sm-4"><h3 class="standard-heading">Sign Up Newsletter</h3>
+        <form ng-submit="submit()">
+            <div class="row">
+                <div class="col col-sm-12">
+                    <div class="form-group label-floating is-empty">
+                        <label class="control-label">Your Name</label>
+                        <input type="text" class="form-control" required>
+                        <span class="material-input"></span></div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col col-sm-12">
+                    <div class="form-group label-floating is-empty">
+                        <label class="control-label">Your Email</label>
+                        <input type="text" class="form-control" required>
+                        <span class="material-input"></span></div>
+                </div>
+            </div>
+
+            <button class="btn">Join</button>
+        </form>
+    </div>
+</div>

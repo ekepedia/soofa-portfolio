@@ -1,0 +1,54 @@
+{
+  "author": {
+    "name": "Eke Wokocha",
+    "email": "eke@mit.edu"
+  },
+  "contributors": [
+    {
+      "name": "Eke Wokocha"
+    }
+  ],
+  "name": "raidtheroom",
+  "description": "Raid the room dashboard",
+  "keywords": [
+    "dashboard",
+    "Raidtheroom"
+  ],
+  "version": "0.0.0",
+  "dependencies": {
+    "async": "^1.5.2",
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "cookies": "^0.6.2",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "express-form-data": "^2.0.0",
+    "express-formidable": "^1.0.0",
+    "express-session": "^1.15.3",
+    "knex": "^0.14.2",
+    "lodash": "^4.17.4",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.1",
+    "node.extend": "1.1.6",
+    "npm": "3.8.5",
+    "socksjs": "^0.5.0",
+    "url": "^0.11.0"
+  },
+  "main": "./raidtheroom.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "start": "node src/raidtheroom.js",
+    "dev": "node src/raidtheroom.js"
+  },
+  "license": "MIT",
+  "readme": "See README file",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "babel-loader": "^6.2.10",
+    "http-server": "^0.9.0",
+    "webpack": "^1.13.3"
+  }
+}

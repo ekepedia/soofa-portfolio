@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h2 class="title">Conversations</h2>
+    </div>
+</div>
+<br/>
+<br/>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body">
+        <div id="table" style="display: none">
+            <table datatable="ng" dt-options="dtOptions" class="table" ng-if="loaded_users">
+                <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Company</th>
+                    <th>T</th>
+                    <th>T (24h)</th>
+                    <th>S</th>
+                    <th>S (24h)</th>
+                    <th>R</th>
+                    <th>R (24h)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="user in loaded_users" ng-if="user.user">
+                    <td >
+                        <a href="/admin/messages/{{user.user.user_id}}">{{user.user.name}}</a>
+                    </td>
+                    <td>{{user.user.company}}</td>
+                    <th scope="row">{{user.total}}</th>
+                    <th>{{user.sent_24 + user.received_24 || 0 | number:0}}</th>
+
+                    <td>{{user.sent}}</td>
+                    <td>{{user.sent_24}}</td>
+
+                    <td>{{user.received}}</td>
+                    <td>{{user.received_24}}</td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="loading" ng-if="!users" style="margin-bottom: 200px">
+        </div>
+    </div>
+
+    <!-- Table -->
+
+</div>

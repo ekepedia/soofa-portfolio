@@ -1,0 +1,42 @@
+<h3 class="rtr-puzzle-title">Puzzle 6</h3>
+
+
+<div ng-show="!is_ready">
+    <h1>Have you used the red lens with something in the room?</h1>
+    <br/>
+    <h2>Click next when you used the red lens.</h2>
+    <br/>
+    <button class="btn rtr-btn" ng-click="ready()"> Next </button>
+</div>
+
+<div ng-show="is_ready">
+
+    <h1>Type in the directions (e.g. up, down, left, right) in the corresponding text boxes below before hitting enter to progress forward.</h1>
+    <br/>
+    <span style="margin-right: 30px; width: 10px" class="rtr-scramle-text">1</span> <input style="color: black" class="rtr-text-field rtr-text-field-mini" ng-model="answer_1a" type="text">
+    <br/>
+    <span style="margin-right: 20px" class="rtr-scramle-text">2</span> <input style="color: black" class="rtr-text-field rtr-text-field-mini" ng-model="answer_2" type="text">
+    <br/>
+    <span style="margin-right: 20px" class="rtr-scramle-text">3</span> <input style="color: black" class="rtr-text-field rtr-text-field-mini" ng-model="answer_3" type="text">
+    <br/>
+    <span style="margin-right: 20px" class="rtr-scramle-text">4</span> <input style="color: black" class="rtr-text-field rtr-text-field-mini" ng-model="answer_4" type="text">
+    <br/>
+    <span style="margin-right: 20px" class="rtr-scramle-text">5</span> <input style="color: black" class="rtr-text-field rtr-text-field-mini" ng-model="answer_5" type="text">
+    <br/>
+    <span style="margin-right: 20px" class="rtr-scramle-text">6</span> <input style="color: black" class="rtr-text-field rtr-text-field-mini" ng-model="answer_6" type="text">
+    <br/>
+    <span style="margin-right: 20px" class="rtr-scramle-text">7</span> <input style="color: black" class="rtr-text-field rtr-text-field-mini" ng-model="answer_7" type="text">
+    <br/>
+
+    <br/>
+    <button class="btn rtr-btn" ng-click="submit_1()"> Submit </button>
+    <h2 class="rtr-answer" ng-if="puzzle_6_answers">Answer: Rotate each direction clockwise once
+        <br/><b>EXCEPT for the first direction.</b></h2>
+
+    <br/>
+    <h3 ng-show="can_proceed_1" style="color:limegreen">Done <span style="font-size: 20px;" class="glyphicon glyphicon-ok"></span></h3>
+    <br/>
+    <button class="btn rtr-btn" ng-click="back()"> back </button>
+
+    <button class="btn rtr-btn" ng-click="next()"> next </button>
+</div>

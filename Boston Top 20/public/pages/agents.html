@@ -1,0 +1,43 @@
+<style>
+    .gn.ng-enter {
+        -webkit-transition: 1s;
+        transition: 1s;
+        opacity: 0;
+    }
+    .gn.ng-enter-stagger {
+        transition-delay: 0.1s;
+        animation-delay: 0.1s;
+    }
+    .gn.ng-enter-active {
+        opacity: 1;
+    }
+</style>
+
+    <div class="row">
+        <div class="col col-sm-9">
+            <form ng-submit="submit()">
+                <div class="col col-sm-6 form-group">
+                    <label for="months">Agent Production Date Range</label>
+                    <select  class="form-control" id="months" ng-model="months">
+                        <option value="1">Past Month</option>
+                        <option value="3">Past 3 Months</option>
+                        <option value="6">Past 6 Months</option>
+                        <option value="12">Past Year</option>
+                    </select>
+                </div>
+                <div class="col col-sm-6 form-group">
+                    <label for="location">Location</label>
+                    <select ng-bind-html="locations_html" class="form-control" id="location" ng-model="location">
+                    </select>
+                </div>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+    $("#location").select2();
+    $("#months").select2();
+
+</script>

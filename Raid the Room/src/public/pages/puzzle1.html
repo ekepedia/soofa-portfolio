@@ -1,0 +1,12 @@
+<h3 class="rtr-puzzle-title">Puzzle 1</h3>
+<h1>Type in the secret message that you found inside the box with the 3 dials to open the keychain lock. </h1>
+<br/>
+<input class="rtr-text-field" ng-model="answer_1" type="text">
+<button class="btn rtr-btn" ng-click="submit_1()"> Submit </button>
+<h2 ng-if="puzzle_1_answers">Answer: {{puzzle_1_answers}}</h2>
+<br>
+<br/>
+<h3 ng-show="can_proceed_1" style="color:limegreen">Done <span style="font-size: 20px;" class="glyphicon glyphicon-ok"></span></h3>
+<br/>
+<button class="btn rtr-btn" ng-click="back()"> back </button>
+<button class="btn rtr-btn" ng-click="next()"> next </button>

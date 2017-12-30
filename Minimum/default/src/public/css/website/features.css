@@ -1,0 +1,72 @@
+#features h1,
+#features h2,
+#features p{
+    text-align: center;
+}
+
+
+#features h1{
+    font-size: 18.62px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    margin-bottom: 0;
+}
+
+#features h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 40px;
+
+    margin-bottom: 0;
+}
+
+#features p {
+    margin-top: 20px;
+    line-height: 25px;
+    margin-bottom: -10px;
+    font-size: 13px;
+    width: 200px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#features {
+    min-height: 728px;
+    padding-top: 185px;
+    padding-bottom: 180px;
+}
+
+#features img {
+    float: none;
+    margin: auto;
+}
+
+#features .img-holder {
+    height: 91px;
+    margin-top: 102px;
+}
+
+#onetouch {
+    max-height: 91px;
+}
+
+#visual {
+    max-height: 77px;
+    margin-top: 11px;
+    margin-bottom: 3px;
+}
+
+#async {
+    max-height: 56px;
+    margin-top: 22px;
+    margin-bottom: 13px;
+}
+
+#nlp {
+    max-height: 62px;
+    margin-top: 19px;
+    margin-bottom: 10px;
+}

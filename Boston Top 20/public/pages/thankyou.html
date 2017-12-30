@@ -1,0 +1,17 @@
+
+<div class="row">
+    <div class="col col-sm-12">
+        <h1>Thank You</h1>
+        <h4>You'll here back from us soon. In the meantime, you can find agents or check our latest blog posts:</h4>
+    </div>
+    <div class="col col-sm-9">
+        <a href="/find/agents">
+            <img class="text-center center img img-responsive img-circle" src="/img/findagent.png" alt="" style="max-width: 400px; z-index: 1;margin-top: 30px; margin-left: auto;margin-right: auto;text-align: center;">
+        </a>
+    </div>
+    <div class="col col-sm-3"><h3><b>Recent Posts</b></h3>
+        <div>
+            <p ng-repeat="b in blogs | limitTo:10"><a href="/blog/{{b.url}}">&gt; {{b.title}}</a></p>
+        </div>
+    </div>
+</div>

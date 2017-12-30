@@ -1,0 +1,85 @@
+<script src="../../js/controllers/MessageController.js"></script>
+
+<h4 class="title"><span class="back"><a href="/admin/users">Users</a> // </span>EDIT USER</h4>
+<br/>
+<form class="form-horizontal" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">COMPANY:</label>
+        <div class="col-sm-6">
+            <select ng-model="company_id" class="form-control">
+                <option ng-repeat="company in companies" value="{{company.company_id}}">{{company.name}} ({{company.domain}})</option>
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <a href="/admin/companies/edit/{{company_id}}">
+                <p style="text-align: center">View Company</p>
+            </a>
+        </div>
+    </div>
+    <div ng-if="active" class="form-group has-success has-feedback">
+        <label for="inputEmail3" class="col-sm-3 control-label">USER STATUS:</label>
+        <div class="col-sm-6">
+            <input disabled type="text" class="form-control" placeholder="Active via LinkedIn on {{pretty(active)}}">
+        </div>
+    </div>
+    <div id="username" ng-class="{'has-success': username_is_valid, 'has-error': !username_is_valid}" class="form-group has-feedback">
+        <label for="inputEmail3" class="col-sm-3 control-label">USERNAME:</label>
+        <div class="col-sm-6">
+            <div class="input-group">
+                <div class="input-group-addon">@</div>
+                <input ng-change="valid_username()" ng-model="username" type="text" class="form-control" id="inputEmail3" placeholder="">
+                <span ng-if="username_is_valid" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                <span ng-if="!username_is_valid" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+            <p style="font-size: 10px;">{{user_id}}</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">DISPLAY NAME:</label>
+        <div class="col-sm-6">
+            <input ng-model="name" type="text" class="form-control" placeholder="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">EMAIL:</label>
+        <div class="col-sm-6">
+            <input ng-model="email" type="text" class="form-control" placeholder="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">LINKEDIN URL:</label>
+        <div class="col-sm-6">
+            <div class="input-group">
+                <div class="input-group-addon">linkedin.com/in/</div>
+                <input ng-model="linkedin_id" type="text" class="form-control" placeholder="">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">CELL:</label>
+        <div class="col-sm-6">
+            <input ng-model="cell" type="text" class="form-control" placeholder="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">USER IMAGE:</label>
+        <div class="col-sm-6">
+            <input type="file" fileread="image" onchange="angular.element(this).scope().uploadFile(this.files)" name="logo">
+        </div>
+        <div class="col-sm-3">
+            <p style="text-align: center">Preview</p>
+            <img src="{{image || 'http://www.drodd.com/images14/black11.jpg'}}" style="width: 150px; margin: auto; margin-top: 50px" class="img-responsive img-circle">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+            <button ng-disabled="!image || !company_id || !username || !email || !username_is_valid" ng-click="update()" class="btn btn-default">Save User</button>
+            <button ng-click="delete()" class="btn btn-danger">Delete User</button>
+            <a href="/admin/users"><button class="btn btn-danger">Cancel</button></a>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,177 @@
+<div class="">
+
+    <div class="col-xs-4 left-column">
+        <p class="inbox" style="margin-left: -20px; display: none; font-size: 12px;letter-spacing: 2px;">
+            <span style="margin-left: 80px; margin-right: 10%">COMPOSE</span>
+            <span style="font-size: 20px">|</span>
+            <span class="selected-toggle">INBOX </span>
+            <span ng-click="reload()" style="float: right;margin-right: 20px;font-size: 12px;margin-top: 10px;" class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+        </p>
+
+        <section class="login-pane">
+            <form ng-submit="login()">
+                <div class="login-logo-holder">
+                    <img class="login-logo" src="/img/logo.png"/>
+
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control minimum-input" ng-model="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control minimum-input" ng-model="password" placeholder="Password">
+                </div>
+                <div class="form-group minimum-submit-wrapper">
+                    <button type="submit" class="minimum-submit">LOGIN</button>
+
+                </div>
+            </form>
+        </section>
+
+        <section class="messages-pane" style="display: none">
+            <div ng-repeat="m in messages" ng-click="set_messages(m)" ng-class="{selected : is_selected(m)}">
+
+                <div class="row contact-panel">
+                    <div style="margin-top: 34px">
+                        <div class="contact-photo-holder">
+                            <img preload src="{{get_photo(get_inbox_contact(m))}}" class="contact-photo img-circle">
+                        </div>
+                        <div class="contact-name-holder">
+                            <p>{{get_name(get_inbox_contact(m))}}</p>
+                            <p class="company">{{get_company(get_inbox_contact(m))}}</p>
+                        </div>
+                        <div class="">
+                            <div class="unread-count contact-unread-holder" ng-if="count_unread(m) > 0">
+                                <p>{{count_unread(m)}} New</p>
+                            </div>
+                            <div class="time-stamp contact-unread-holder" ng-if="count_unread(m) === 0">
+                                <p>{{date(m[0].created_at)}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="col-xs-8  right-column">
+        <div class="video-loading" style="display: none">
+            <svg class="lds-spin" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="translate(66,50)">
+                    <g transform="rotate(0)">
+                        <circle cx="0" cy="0" r="4" fill="#5B3DDE" fill-opacity="1" transform="scale(0.3 0.3)">
+                            <animateTransform attributeName="transform" type="scale" begin="-0.9s" values="0 0;1 1" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                            <animate attributeName="fill-opacity" keyTimes="0;1" dur="1s" repeatCount="indefinite" values="1;0" begin="-0.9s"></animate>
+                        </circle>
+                    </g>
+                </g><g transform="translate(62.94427190999916,59.404564036679574)">
+                    <g transform="rotate(36)">
+                        <circle cx="0" cy="0" r="4" fill="#5B3DDE" fill-opacity="0.9" transform="scale(0.2 0.2)">
+                            <animateTransform attributeName="transform" type="scale" begin="-0.8s" values="0 0;1 1" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                            <animate attributeName="fill-opacity" keyTimes="0;1" dur="1s" repeatCount="indefinite" values="1;0" begin="-0.8s"></animate>
+                        </circle>
+                    </g>
+                </g><g transform="translate(54.94427190999916,65.21690426072246)">
+                    <g transform="rotate(72)">
+                        <circle cx="0" cy="0" r="4" fill="#5B3DDE" fill-opacity="0.8" transform="scale(0.1 0.1)">
+                            <animateTransform attributeName="transform" type="scale" begin="-0.7s" values="0 0;1 1" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                            <animate attributeName="fill-opacity" keyTimes="0;1" dur="1s" repeatCount="indefinite" values="1;0" begin="-0.7s"></animate>
+                        </circle>
+                    </g>
+                </g><g transform="translate(45.05572809000084,65.21690426072246)">
+                    <g transform="rotate(108)">
+                        <circle cx="0" cy="0" r="4" fill="#5B3DDE" fill-opacity="0.7" transform="scale(1.38767e-8 1.38767e-8)">
+                            <animateTransform attributeName="transform" type="scale" begin="-0.6s" values="0 0;1 1" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                            <animate attributeName="fill-opacity" keyTimes="0;1" dur="1s" repeatCount="indefinite" values="1;0" begin="-0.6s"></animate>
+                        </circle>
+                    </g>
+                </g><g transform="translate(37.05572809000084,59.404564036679574)">
+                    <g transform="rotate(144)">
+                        <circle cx="0" cy="0" r="4" fill="#5B3DDE" fill-opacity="0.6" transform="scale(0.9 0.9)">
+                            <animateTransform attributeName="transform" type="scale" begin="-0.5s" values="0 0;1 1" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                            <animate attributeName="fill-opacity" keyTimes="0;1" dur="1s" repeatCount="indefinite" values="1;0" begin="-0.5s"></animate>
+                        </circle>
+                    </g>
+                </g><g transform="translate(34,50)">
+                    <g transform="rotate(180)">
+                        <circle cx="0" cy="0" r="4" fill="#5B3DDE" fill-opacity="0.5" transform="scale(0.8 0.8)">
+                            <animateTransform attributeName="transform" type="scale" begin="-0.4s" values="0 0;1 1" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                            <animate attributeName="fill-opacity" keyTimes="0;1" dur="1s" repeatCount="indefinite" values="1;0" begin="-0.4s"></animate>
+                        </circle>
+                    </g>
+                </g><g transform="translate(37.05572809000084,40.59543596332043)">
+                    <g transform="rotate(216)">
+                        <circle cx="0" cy="0" r="4" fill="#5B3DDE" fill-opacity="0.4" transform="scale(0.7 0.7)">
+                            <animateTransform attributeName="transform" type="scale" begin="-0.3s" values="0 0;1 1" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                            <animate attributeName="fill-opacity" keyTimes="0;1" dur="1s" repeatCount="indefinite" values="1;0" begin="-0.3s"></animate>
+                        </circle>
+                    </g>
+                </g><g transform="translate(45.05572809000084,34.78309573927754)">
+                    <g transform="rotate(252)">
+                        <circle cx="0" cy="0" r="4" fill="#5B3DDE" fill-opacity="0.3" transform="scale(0.6 0.6)">
+                            <animateTransform attributeName="transform" type="scale" begin="-0.2s" values="0 0;1 1" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                            <animate attributeName="fill-opacity" keyTimes="0;1" dur="1s" repeatCount="indefinite" values="1;0" begin="-0.2s"></animate>
+                        </circle>
+                    </g>
+                </g><g transform="translate(54.94427190999916,34.78309573927754)">
+                    <g transform="rotate(288)">
+                        <circle cx="0" cy="0" r="4" fill="#5B3DDE" fill-opacity="0.2" transform="scale(0.5 0.5)">
+                            <animateTransform attributeName="transform" type="scale" begin="-0.1s" values="0 0;1 1" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                            <animate attributeName="fill-opacity" keyTimes="0;1" dur="1s" repeatCount="indefinite" values="1;0" begin="-0.1s"></animate>
+                        </circle>
+                    </g>
+                </g><g transform="translate(62.94427190999916,40.595435963320426)">
+                    <g transform="rotate(324)">
+                        <circle cx="0" cy="0" r="4" fill="#5B3DDE" fill-opacity="0.1" transform="scale(0.4 0.4)">
+                            <animateTransform attributeName="transform" type="scale" begin="0s" values="0 0;1 1" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                            <animate attributeName="fill-opacity" keyTimes="0;1" dur="1s" repeatCount="indefinite" values="1;0" begin="0s"></animate>
+                        </circle>
+                    </g>
+                </g></svg>
+        </div>
+
+        <div class="dog-emoji" style="display: none">
+            <img id="dog-emoji" src="https://lovelace-media.imgix.net/uploads/877/52352600-fd89-0132-f41f-0e18518aac2f.png?w=740&h=740&fit=crop&crop=faces&auto=format&q=70"/>
+        </div>
+
+        <div class="swimlane-area" ng-if="swimlanes">
+            <div class="swimlane-container">
+                <div class="swimlane-holder" ng-repeat="swimlane in swimlanes">
+                    <div data-index="{{swimlane.swimlane_index}}" ng-class="{'swimlane-unwatched': unwatched_swimlane(swimlane.message_index)}" ng-click="play_swimlane(swimlane.message_index)" class="{{swimlane.type}} {{swimlane.origin}} {{current_swimlane(swimlane.message_index)}} {{selected_swimlane_index(swimlane.swimlane_index)}}"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <p class="select-message">Tap on a contact to continue your conversation.</p>
+        <a ng-click="prev()" class="previous-video"></a>
+        <a ng-click="next()" class="next-video"></a>
+        <div class="video-container">
+            <video autoplay style="display: none" class="minimum-video" src="{{safe_url(video_url)}}"></video>
+            <video src="{{safe_url(video_url)}}" id="videobcg" preload="auto" autoplay muted="muted" volume="0">
+                Sorry, your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <div class="pulse-container">
+            <div class="pulse-box">
+                <svg class="pulse-svg" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="pulses">
+                        <circle class="circle first-circle" fill="#FF6347" cx="25" cy="25" r="25"></circle>
+                        <circle class="circle second-circle" fill="#FF6347" cx="25" cy="25" r="25"></circle>
+                        <circle class="circle third-circle" fill="#FF6347" cx="25" cy="25" r="25"></circle>
+                        <circle class="circle" fill="white" fill-opacity="0" cx="25" cy="25" r="25"></circle>
+                    </g>
+                    <image xlink:href="" height="75" style="border-radius:100px" clip-path="url(#circleView)"  transform="translate(-12.5,-12.5)"/>
+                    <defs>
+                        <clipPath id="circleView">
+                            <circle cx="37.5" cy="37.5" r="37.5" fill="#FFFFFF" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+    </div>
+
+</div>

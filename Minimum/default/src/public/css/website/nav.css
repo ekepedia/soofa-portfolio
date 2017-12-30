@@ -1,0 +1,115 @@
+.navbar-custom {
+    height: 65px;
+    padding: 0 100px 0 100px;
+    margin:  0 0 0 0;
+    border:  0;
+}
+
+.navbar-custom ul,
+.navbar-custom ul li
+{
+    align-items: center;
+    height: 65px;
+}
+
+.navbar-custom ul
+{
+    float: right;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.navbar-custom ul li a {
+
+    line-height: 65px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    padding: 0 0;
+    pointer-events: all;
+
+    display: none;
+}
+
+.navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+    background-color: white;
+    color: #5b34e1;
+}
+
+#nav-logo {
+    height: 22px;
+    margin: 22px 0;
+}
+
+.navbar-brand {
+    padding: 0;
+    height: 100%;
+}
+
+#navbar {
+    float: right;
+    height: 65px;
+}
+
+
+#navbar li{
+    float: right;
+    text-align: right;
+    width: 500px;
+    position: absolute;
+    right: 0;
+}
+
+
+.Request_Access {
+    font-size: 29px;
+    font-family: "ProximaNovaSemibold";
+    color: #656c7b;
+    text-transform: uppercase;
+    line-height: 65px;
+    text-align: right;
+    -moz-transform: matrix( 0.43348800702891,0,0,0.43332553026465,0,0);
+    -webkit-transform: matrix( 0.43348800702891,0,0,0.43332553026465,0,0);
+    -ms-transform: matrix( 0.43348800702891,0,0,0.43332553026465,0,0);
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #636778;
+    display: none;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    margin: 0;
+    margin-top: 25.5px;
+    background-color: transparent;
+    background-image: none;
+    padding: 0;
+    border-width: 0px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: initial;
+    border-radius: 4px;
+}
+
+@media (max-width: 480px) {
+    .navbar-custom {
+        color: #636778;
+        padding: 0 30px 0 30px;
+
+    }
+}
+
+@media (min-width: 2000px) {
+    .navbar-custom {
+        color: #636778;
+        padding: 0 300px 0 300px;
+
+    }
+    #navbar li{
+        right: 200px;
+    }
+}

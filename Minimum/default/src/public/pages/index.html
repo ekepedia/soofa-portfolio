@@ -1,0 +1,21 @@
+<h3 class="title">STATS YO!</h3>
+<br/>
+<div class="row" style="text-align: center; margin-top: 10px">
+    <div class="col-sm-4">
+        <h5 class="big-stat"> <div class="loading company-loading" ng-if="!companies" style="margin-bottom: 0px; margin-top: 0px"></div><span id="company" style="display: none" class="big-number">{{companies}}</span><br/> <span style="color: #5736da">Excited</span> Companies</h5>
+    </div>
+    <div class="col-sm-4">
+        <h5 class="big-stat"> <div class="loading user-loading" ng-if="!users" style="margin-bottom: 0px; margin-top: 0px"></div><span id="user" style="display: none" class="big-number">{{users || 0}}</span><br/> <span style="color: #5736da">Curious</span> Users</h5>
+    </div>
+    <div class="col-sm-4">
+        <h5 class="big-stat"> <div class="loading group-loading" ng-if="!groups" style="margin-bottom: 0px; margin-top: 0px"></div><span id="group" style="display: none"  class="big-number">{{groups || 0}}</span><br/> <span style="color: #5736da">Lively</span> Groups</h5>
+
+    </div>
+</div>
+<div class="row" style="text-align: center; margin-top: 100px">
+    <div class="col-xs-12">
+        <h5 class="big-stat"> <div class="loading message-loading" ng-if="!messages" style="margin-bottom: 0px; margin-top: 0px"></div><span id="message" style="display: none" class="big-number">{{messages || 0}}</span><br/> <span style="color: #5736da">Async.</span> Messages</h5>
+    </div>
+</div>
+
+

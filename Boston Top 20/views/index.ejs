@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="bostontop20">
+
+    <% include ./partials/head %>
+
+    <body class="index-page">
+
+        <% include ./partials/nav %>
+
+        <div class="wrapper">
+            <div class="header header-filter" style="background-image: url('/assets/img/boston.jpg');height: 45vh">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-md-12">
+                            <div style="margin-top: 20vh" class="brand">
+                                <h3 class="standard-title" style="max-width: 100vw">Find the best real estate agents in your town based on third party reporting.</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                <div class="main main-raised">
+                    <div class="section section-basic">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col col-sm-12">
+                                    <div id="view" autoscroll="true" ng-view></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <% include ./partials/footer %>
+        <% include ./partials/scripts %>
+
+    </body>
+</html>

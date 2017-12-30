@@ -1,0 +1,36 @@
+#carousel {
+    height: 728px;
+    background-color: #656c7c;
+    padding: 0;
+}
+
+#img-carousel {
+    height: 728px;
+    width: 100%;
+}
+
+#img-carousel img{
+    margin: auto;
+    height: 100%;
+    margin-top: 57.375px;
+}
+
+.carousel-control,
+.carousel-control.right,
+.carousel-control.left{
+    background: none;
+}
+
+#carousel .right-arrow,
+#carousel .left-arrow{
+    height: 23px;
+    margin-top: 352.5px;
+}
+
+#carousel .left-arrow{
+    margin-left: -17px;
+}
+
+#carousel .right-arrow{
+    margin-right: -17px;
+}

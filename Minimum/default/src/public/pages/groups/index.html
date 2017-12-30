@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h2 class="title">Groups</h2>
+    </div>
+</div>
+<br/>
+<br/>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body" >
+
+        <div id="table" style="display: none">
+            <table datatable="ng" dt-options="dtOptions" class="table" ng-if="groups">
+                <thead>
+                <tr>
+                    <th>Group Name</th>
+                    <th>Total</th>
+                    <th>Total By Day</th>
+                    <th>Group Members</th>
+                    <th>Created</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="group in groups" ng-if="group.group">
+                    <td >
+                        <a href="/admin/groups/{{group.group.group_metadata.group_id}}">{{group.group.group_metadata.name}}</a>
+                    </td>
+                    <th scope="row">{{group.total}}</th>
+                    <th scope="row">{{group.total_daily | number:0}}</th>
+                    <th scope="row">{{count(group.group.group_members)}}</th>
+                    <th scope="row">{{date(group.group.group_metadata.created_at)}}</th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="loading" ng-if="!groups" style="margin-bottom: 200px">
+        </div>
+    </div>
+
+    <!-- Table -->
+
+</div>

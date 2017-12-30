@@ -1,0 +1,29 @@
+#minimum h1,
+#minimum p {
+    color: white;
+}
+
+#minimum h1{
+    font-size: 18.62px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+#minimum p {
+    margin-top: 20px;
+    line-height: 30px;
+    margin-bottom: -10px;
+}
+
+#minimum {
+    height: 728px;
+    padding-top: 180px;
+    padding-bottom: 180px;
+
+    background: #492bb0 url(/img/minimum.png) right bottom no-repeat;
+    background-size: auto 684px;
+}
+
+
+#minimum .row{
+    max-width: 520px;
+}

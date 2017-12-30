@@ -1,0 +1,32 @@
+<div class="single-content">
+    <h1 class="entry-title">Testimonial</h1>
+    <form ng-submit="submit()">
+        <p>Submit a Testimonial for {{agent}}</p>
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Name (required)</label>
+                    <input ng-model="name" type="text" class="form-control" required>
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Email (required)</label>
+                    <input ng-model="email" type="text" class="form-control" required>
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Testimonial</label>
+                    <textarea ng-model="text" class="form-control" rows="5" required></textarea>
+                    <span class="material-input"></span>
+                </div>
+            </div>
+        </div>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+</div>

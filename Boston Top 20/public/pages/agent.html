@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col col-xs-12">
+        <h2><strong>{{name}} | {{town}}</strong></h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-sm-3">
+        <img class="img img-raised img-rounded" style="max-width: 100%" src="{{url}}">
+        <br/>
+        <br/>
+        <h5>{{name}}</h5>
+        <a href="/contact?agent={{agent}}&name={{name}}">
+            <button class="btn">Contact Me</button>
+        </a>
+    </div>
+    <div class="col col-sm-9">
+        <div style="margin-top: 10px"  class="card">
+            <div class="content">
+                <h2>About Me</h2>
+                <h4>
+                    {{about}}
+                </h4>
+                <a ng-if="!(user._id == agent)" href="/login">
+                    <button class="btn">Login</button>
+                </a>
+                <a ng-if="user._id == agent" href="/profile">
+                    <button class="btn">Edit Profile</button>
+                </a>
+            </div>
+        </div>
+        <div style="margin-top: 10px"  class="card">
+            <div class="content">
+                <h2>Rankings in {{town}}</h2>
+                <div class="row">
+                    <div class="gn col col-xs-6 col-sm-4 col-md-3" ng-repeat="r in list">
+                        <a href="/lists/{{town}}/{{r.month}}">
+                            <div style="margin-top: 10px"  class="card">
+                                <div class="content">
+                                    <img class="img img-raised img-rounded" style="max-width: 100%" src="/img/rank{{r.rank+1}}.jpg">
+                                    <br/>
+                                    <br/>
+                                    <p>In sales over the <strong>{{time[dates.indexOf(r.month)]}}</strong></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <br/>
+            </div>
+        </div>
+        <div style="margin-top: 10px"  class="card">
+            <div class="content">
+                <h2>Testimonials</h2>
+                <blockquote ng-repeat="t in testimonials">
+                    <p>{{t.text}}</p>
+                    <footer>— {{t.name}}</footer>
+                </blockquote>
+                <a href="/testimonial/{{agent}}?town={{town}}"><button class="btn">Submit A Testimonial</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+

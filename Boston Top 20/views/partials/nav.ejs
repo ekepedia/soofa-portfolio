@@ -1,0 +1,86 @@
+<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <div class="logo">
+                    <img class="img" style="height: 60px; margin-top: -12px" src="assets/img/logo.png"/>
+                </div>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navigation-example">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">
+                        Home
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        How It Works
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/find/agents">
+                        Find Agents
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Services
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="/get-a-loan">Get a Loan</a>
+                        <li><a href="/legal-services">Legal Services</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/advertise">
+                        Advertise
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a ng-if="!user" href="/login">
+                        Login
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact">
+                        Contact Us
+                    </a>
+                </li>
+                <li ng-if="user" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Welcome, {{user.name}}
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="/profile">Edit Profile</a></li>
+                        <li><a ng-if="user" href="/logout">
+                                Logout
+                            </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

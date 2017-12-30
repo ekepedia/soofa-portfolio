@@ -1,0 +1,34 @@
+<div style="margin-top: 75px" class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="card card-signup">
+            <form class="form" method="" action="">
+                <div class="header text-center">
+                    <h4>Login</h4>
+                    <h5 style="color:red">{{message}}</h5>
+                </div>
+                <div class="content">
+
+                    <div class="input-group">
+										<span class="input-group-addon">
+											<i class="material-icons">email</i>
+										</span>
+                        <div class="form-group is-empty"><input ng-model="email" type="text" class="form-control" placeholder="Email..."><span class="material-input"></span></div>
+                    </div>
+
+                    <div class="input-group">
+										<span class="input-group-addon">
+											<i class="material-icons">lock_outline</i>
+										</span>
+                        <div class="form-group is-empty"><input ng-model="password" type="password" placeholder="Password..." class="form-control"><span class="material-input"></span></div>
+                    </div>
+
+                </div>
+                <div class="footer text-center">
+                    <a href="/signup" class="btn btn-simple btn-primary btn-lg">Sign Up</a>
+                    <a ng-click="submit()" href="#" class="btn btn-simple btn-primary btn-lg">Login</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

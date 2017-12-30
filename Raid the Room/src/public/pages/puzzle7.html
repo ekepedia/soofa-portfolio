@@ -1,0 +1,32 @@
+<h3 class="rtr-puzzle-title">Puzzle 7</h3>
+
+
+<div ng-show="!is_ready">
+    <h1>Have you opened the directional lock yet?* </h1>
+    <br/>
+    <h2>Click next when you have unlocked the directional lock. </h2>
+    <br/>
+    <button class="btn rtr-btn" ng-click="ready()"> Next </button>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h4>*If you have not opened the directional lock, then be careful not to freeze the lock out. Entering too many incorrect answers within a short window (three times in 1 minute) will lock you out. Be sure of your answer before entering it, and enter the directions quickly.</h4>
+</div>
+
+<div ng-show="is_ready">
+
+    <h1>Type in the answer to the logic puzzle. </h1>
+    <br/>
+
+    <input class="rtr-text-field" ng-model="answer_1" type="text">
+    <button class="btn rtr-btn" ng-click="submit_1()"> Submit </button>
+    <h2 class="rtr-answer" ng-if="puzzle_7_answers">Answer: {{puzzle_7_answers}}</h2>
+
+    <br/>
+    <h3 ng-show="can_proceed_1" style="color:limegreen">Done <span style="font-size: 20px;" class="glyphicon glyphicon-ok"></span></h3>
+    <br/>
+    <button class="btn rtr-btn" ng-click="back()"> back </button>
+
+    <button class="btn rtr-btn" ng-click="next()"> next </button>
+</div>

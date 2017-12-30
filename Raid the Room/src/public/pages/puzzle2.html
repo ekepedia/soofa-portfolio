@@ -1,0 +1,42 @@
+
+<h3 class="rtr-puzzle-title">Puzzle 2</h3>
+<div ng-show="!is_ready">
+    <h1>Have you used your 2 keys yet?</h1>
+    <br/>
+    <h2>Click next when you have completed using your keys.</h2>
+    <br/>
+    <button class="btn rtr-btn" ng-click="ready()"> Next </button>
+</div>
+
+<div ng-show="is_ready">
+
+    <h1>Type in the 3-digit answer from the Tetris Blocks.</h1>
+    <br/>
+
+    <input class="rtr-text-field" ng-model="answer_1" type="text">
+    <button class="btn rtr-btn" ng-click="submit_1()"> Submit </button>
+    <h2 class="rtr-answer" ng-if="puzzle_2a_answers">Answer: {{puzzle_2a_answers}}</h2>
+
+
+    <h1>Type in the 3-digit answer from the Quarters Puzzle.</h1>
+    <br/>
+
+    <input class="rtr-text-field" ng-model="answer_2" type="text">
+    <button class="btn rtr-btn" ng-click="submit_2()"> Submit </button>
+    <h2 class="rtr-answer" ng-if="puzzle_2b_answers">Answer: {{puzzle_2b_answers}}</h2>
+
+
+    <br/>
+    <h3 ng-show="can_proceed_1 && can_proceed_2" style="color:limegreen">Done <span style="font-size: 20px;" class="glyphicon glyphicon-ok"></span></h3>
+    <br/>
+
+    <div ng-show="can_proceed_1 && can_proceed_2">
+        <h1>Use the answer below for a lock found in the room. Then click on the "Next Puzzle" button. </h1>
+        <h2 class="rtr-answer" style="font-weight: bold">Answer: 831</h2>
+    </div>
+
+    <br/>
+    <button class="btn rtr-btn" ng-click="back()"> back </button>
+
+    <button class="btn rtr-btn" ng-click="next()"> next </button>
+</div>

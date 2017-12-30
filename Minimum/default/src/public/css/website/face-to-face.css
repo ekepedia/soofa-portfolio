@@ -1,0 +1,42 @@
+#face-to-face {
+    height: 728px;
+    padding-top: 281px;
+    padding-bottom: 281px;
+
+    /* TODO center*/
+    background-color: #f3f7f8;
+}
+
+#face-to-face h1,
+#face-to-face p {
+    text-align: center;
+}
+
+#face-to-face .row{
+    max-width: 720px;
+    margin: auto;
+}
+
+#face-to-face h1{
+    font-size: 18.62px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+#face-to-face p {
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+@media (max-width: 480px) {
+    #face-to-face {
+        padding-top: 223px;
+        padding-bottom: 233px;
+    }
+}
+
+@media (max-width: 320px) {
+    #face-to-face {
+        padding-top: 178px;
+        padding-bottom: 178px;
+    }
+}

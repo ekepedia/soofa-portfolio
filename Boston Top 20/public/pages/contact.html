@@ -1,0 +1,42 @@
+<div class="single-content">
+    <h1 class="entry-title">Contact {{name || "Us"}}</h1>
+    <p ng-if="!name">For sponsorship opportunities, questions about the site,
+        or general questions, please email <a style="color:#3C90BE" href="mailto:info@bostontop20.com">info@bostontop20.com</a> or use the form below.</p>
+    <form ng-submit="submit()">
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Name (required)</label>
+                    <input type="text" class="form-control" ng-model="sendername" required>
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Email (required)</label>
+                    <input type="text" class="form-control" ng-model="senderemail" required>
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Subject</label>
+                    <input type="text" class="form-control" ng-model="sendersubject">
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">Message</label>
+                    <textarea class="form-control" rows="5" required ng-model="senderbody"></textarea>
+                    <span class="material-input"></span>
+                </div>
+            </div>
+        </div>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+
+</div>

@@ -1,0 +1,362 @@
+.inbox {
+    text-align: center;
+    font-size: 12px;
+}
+
+.select-message {
+    text-align: center;
+    float: none;
+    margin: auto;
+    margin-top: 50vh;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    width: 25vw;
+    line-height: 20px;
+    display: none;
+}
+
+.contact-photo {
+    height: 50px;
+    margin-left: 33px;
+    border: 1.5px solid rgba(196, 203, 219, .20)
+}
+
+.contact-panel {
+    padding: 0;
+    width: 100%;
+    height: 118px;
+}
+
+.selected {
+    background-color: black;
+}
+
+.left-column {
+    background-color: white;
+    color:white;
+    height: 100vh;
+    overflow: auto;
+    padding: 0;
+    z-index: 10;
+}
+
+.right-column {
+    background-image: url("/img/blurredface.png");
+    background-position: center;
+    background-size: 100% 100%;
+    color:white;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.left-column p {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.left-column .inbox {
+    background-color: #616362;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    letter-spacing: 4px;
+}
+
+.company {
+    margin-top: -10px;
+}
+
+.minimum-video {
+    min-height: 100vh;
+    left: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+#videobcg {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    min-width: 120%;
+    min-height: 120%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+    -webkit-filter: blur(300px);
+    -moz-filter: blur(300px);
+    -o-filter: blur(300px);
+    -ms-filter: blur(300px);
+    filter: blur(300px);
+}
+
+.previous-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    width: 50%;
+    height: 100%;
+    z-index: 110;
+    background-color: rgba(0,0,0,0);
+    text-align: center;
+}
+
+.next-video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    z-index: 110;
+    background-color: rgba(0,0,0,0);
+    text-align: center;
+}
+
+.minimum-input {
+    background-color: #eaeff2;
+    color: #676a7a;
+    width: 30vw;
+    margin: auto;
+    border-radius: 1000px;
+    border: 0;
+    height: 60px;
+    margin-top: 35px;
+    font-size: 19px;
+    padding-left: 30px;
+}
+
+.minimum-submit {
+    background-color: #5736da;
+    color: white;
+    width: 30vw;
+    margin: auto;
+    border-radius: 1000px;
+    border: 0;
+    height: 60px;
+    margin-top: 35px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.minimum-submit-wrapper {
+    text-align: center;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #676a7a;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #676a7a;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #676a7a;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #676a7a;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color:    #676a7a;
+}
+
+.login-logo {
+    margin-top: 25vh;
+    height: 50px;
+}
+
+.login-logo-holder {
+    width: 150px;
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+.login-pane {
+    display: none;
+}
+
+.unread-count {
+    background-color: #5B3DDE;
+    color: white;
+    border-radius: 1000px;
+    border: 0;
+    letter-spacing: 4px;
+    text-align: center;
+    padding: 5px;
+    width: 80px;
+    height: 30px;
+}
+
+.time-stamp {
+    text-align: center;
+    padding: 5px;
+    width: 80px;
+    height: 30px;
+}
+
+.video-loading {
+    display: none;
+    width: 150px;
+    margin: auto;
+}
+
+.swimlane-full-pill,
+.swimlane-left-pill,
+.swimlane-right-pill,
+.swimlane-middle-pill {
+    float: left;
+    height: 15px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.swimlane-full-pill {
+    width: 25px;
+    border-radius: 100px;
+    margin-left: 10px;
+}
+
+.swimlane-left-pill {
+    width: 10px;
+    border-radius: 100px 0 0 100px;
+    margin-left: 15px;
+    border-right: 0;
+}
+
+.swimlane-right-pill {
+    width: 10px;
+    border-radius: 0 100px 100px 0;
+    margin-right: 10px;
+    border-left: 0;
+}
+
+.swimlane-gap {
+    width: 25px;
+    border-radius: 100px;
+    margin-left: 10px;
+    border: 0;
+}
+
+.swimlane-middle-pill {
+    width: 15px;
+    border-left: 0;
+    border-right: 0;
+}
+
+.swimlane-sent-pill {
+    margin-top: 41px;
+    background-color: #5B3DDE;
+}
+
+.swimlane-received-pill {
+    margin-top: 12px;
+    background-color: #636778;
+}
+
+.swimlane-current-pill {
+    border-style: solid;
+}
+
+.swimlane-unwatched {
+    opacity: 0.4;
+}
+
+.swimlane-current {
+    opacity: 0.8;
+    border-style: solid;
+}
+
+.swimlane-container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    z-index: 1000;
+    top: 0;
+    position: fixed;
+    left: 33.33%;
+    height: 80px;
+    margin-right: 15px;
+}
+
+.swimlane-area {
+    background-color: rgba(0,0,0,0.4);
+    height: 80px;
+    width: 66.66666666%;
+    overflow: scroll;
+    white-space: nowrap;
+    z-index: 1000;
+    top: 0;
+    position: fixed;
+    left: 33.333333333%;
+}
+
+.swimlane-holder {
+    float: right;
+    height: 80px;
+}
+
+.contact-photo-holder,
+.contact-name-holder{
+    float: left;
+}
+
+.contact-name-holder {
+    margin-left: 21px;
+    margin-top: 7px;
+}
+
+.contact-name-holder p{
+    margin: 0;
+
+}
+
+.contact-unread-holder {
+    float: right;
+}
+
+.selected-toggle {
+    background-color: black;
+    padding: 9px 20px;
+    border-radius: 100px;
+    border: solid 2px rgba(188, 196, 215, .2);
+    margin-left: 10%;
+}
+
+.dog-emoji {
+    z-index: 10000;
+    margin-top: 20vh;
+    float: none;
+}
+
+#dog-emoji {
+    float: none;
+    margin-left: 25%;
+    text-align: center;
+    width: 50%;
+}
+
+#pulses {
+    display: none;
+}
+
+.pulse-box {
+    float: left;
+    width: 50%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: -80px;
+    z-index: 140;
+    left: 41.57777777%;
+} /* pulse in SVG */ svg.pulse-svg { overflow: visible; } svg.pulse-svg .first-circle, svg.pulse-svg .second-circle, svg.pulse-svg .third-circle { fill: #5736da; transform: scale(0.5); transform-origin: center center; animation: pulse-me 1s linear infinite; } svg.pulse-svg .second-circle { animation-delay: 1s; } svg.pulse-svg .third-circle { animation-delay: 1 s; } @keyframes pulse-me { 0% { transform: scale(0.5); opacity: 0; } 50% { opacity: 0.1; } 70% { opacity: 0.09; } 100% { transform: scale(7); opacity: 0; } }
+

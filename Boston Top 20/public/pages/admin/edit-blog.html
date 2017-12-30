@@ -1,0 +1,46 @@
+<div class="single-content">
+    <h1 class="entry-title">Edit Blog Post</h1>
+    <form ng-submit="submit(title,time,text)">
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <p>Title (required)</p>
+                    <input class="form-control" required ng-model="title">
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <p>Date to Publish (required).</p>
+                    <input id="date" type="text" class="datepicker form-control" required ng-model="date">
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <h3>Formatting for Blog Posts</h3>
+            <p>The blogging formatting follows standard HTML, but here are some essentials:</p></br>
+            <div class="text-center col col-sm-6">
+                <p>To make something bold, use the &lt;b&gt;&lt;/b&gt; tags</p>
+                <p><h4>Hello, &lt;b&gt;this is bold&lt;/b&gt;. This is not.</h4> will show up as
+                <h4>Hello, <b>this is bold.</b> This is not.</h4></p>
+            </div>
+            <div class="text-center col col-sm-6">
+                <p>To make something italicized, use the &lt;i&gt;&lt;/i&gt; tags</p>
+                <p><h4>Hello, &lt;i&gt;this is italicized&lt;/i&gt;. This is not.</h4> will show up as
+                <h4>Hello, <i>this is italicized.</i> This is not.</h4></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-12">
+                <div class="form-group label-floating is-empty">
+                    <p>Text (required)</p>
+                    <textarea class="form-control" rows="20" id="comment" ng-model="text"></textarea>
+                    <span class="material-input"></span></div>
+            </div>
+        </div>
+        <button class="btn" type="submit">Save</button>
+    </form>
+    <h3>Preview of Blog Post as the User sees it:</h3>
+    <div style="border: 3px solid black;padding: 25px;" ng-bind-html="toHtml(text, title, date)"></div>
+</div>

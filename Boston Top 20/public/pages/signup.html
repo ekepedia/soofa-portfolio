@@ -1,0 +1,88 @@
+<div style="margin-top: 75px" class="row">
+    <style>
+        input[type=checkbox]
+        {
+            -webkit-appearance:checkbox;
+        }
+    </style>
+    <div class="col-md-8 col-md-offset-2">
+        <div class="card card-signup">
+            <form class="form" ng-submit="submit()">
+                <div class="header text-center">
+                    <h4>Sign Up</h4>
+                    <h5 style="color:red">{{message}}</h5>
+                </div>
+                <div class="content">
+
+                    <div class="row">
+                        <div class="col col-sm-6 ">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">account_circle</i>
+                                </span>
+                                <div class="form-group is-empty"><input ng-model="name" type="text" class="form-control" placeholder="Agent Name"><span class="material-input"></span></div>
+                            </div>
+                        </div>
+                        <div class="col col-sm-6 ">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">work</i>
+                                </span>
+                                <div class="form-group is-empty"><input ng-model="company" type="text" placeholder="Company Name" class="form-control"><span class="material-input"></span></div>
+                            </div>
+                        </div>
+                        <div class="col col-sm-6 ">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">email</i>
+                                </span>
+                                <div class="form-group is-empty"><input ng-model="email" type="text" placeholder="Email" class="form-control"><span class="material-input"></span></div>
+                            </div>
+                        </div>
+                        <div class="col col-sm-6 ">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">contact_phone</i>
+                                </span>
+                                <div class="form-group is-empty"><input ng-model="number" type="text" placeholder="Phone Number" class="form-control"><span class="material-input"></span></div>
+                            </div>
+                        </div>
+                        <div class="col col-sm-6 ">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">perm_identity</i>
+                                </span>
+                                <div class="form-group is-empty"><input ng-model="mls" type="text" placeholder="MLS ID" class="form-control"><span class="material-input"></span></div>
+                            </div>
+                            <p>*This is required to verify</p>
+                        </div>
+                        <div class="col col-sm-6 ">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">lock_outline</i>
+                                </span>
+                                <div class="form-group is-empty"><input ng-model="password" type="password" placeholder="Password" class="form-control"><span class="material-input"></span></div>
+                            </div>
+                            <p>*This will be use as your password when login later</p>
+                        </div>
+                        <div class="col col-sm-12">
+                            <br/>
+                            <p>*If you are an Agent, but do not have an MLS ID, please contact <a style="color:#3C90BE" href="mailto:info@bostontop20.com">info@bostontop20.com</a>. We will respond back shortly.</p>
+                            <br/>
+                            <div class="">
+                                <input type="checkbox" value="" ng-model="checked">
+                                <label>I agree to the <a target="_blank" href="/agent-agreement">Stand Alone License Agreement</a></label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer text-center">
+                    <a href="/login" class="btn btn-simple btn-primary btn-lg">Login</a>
+                    <a ng-click="submit()" ng-disabled="!checked" href="#" class="btn btn-simple btn-primary btn-lg">Sign Up</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

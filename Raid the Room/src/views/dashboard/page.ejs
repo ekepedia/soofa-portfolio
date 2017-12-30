@@ -1,0 +1,221 @@
+<div class="row" ng-controller="MainCtrl">
+    <div id="rtr-main" class="col col-xs-7" >
+        <div id="view" autoscroll="true" ng-view></div>
+    </div>
+    <div id="rtr-sidebar" class="col col-xs-5">
+        <img style="    margin-left: 12.5%;" src="/img/Raid-the-Room---Logo-Final-HQ.png" width="75%"/>
+    <p style="margin-top: 40px; text-align: center; font-size: 60pt;font-weight: 800">{{minutes(time)}} {{seconds(time)}}</p>
+        <div class="rtr-sidebar-times" style="font-size: 12pt;">
+            <div class="row">
+                <div class="col-xs-3 rtr-col-1">
+                    <p>Start Time:</p>
+                </div>
+                <div class="col-xs-3 rtr-col-2">
+                    <p>{{pretty(start_complete_time)}}</p>
+                </div>
+                <div class="col-xs-3 rtr-col-1">
+                    <p>Time Spent</p>
+                </div>
+                <div class="col-xs-3 rtr-col-1">
+                    <p>Answers</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 rtr-col-1">
+                    <p>{{names.puzzle_1}}:</p>
+                </div>
+                <div class="col-xs-3 rtr-col-2">
+                    <p>{{pretty(completion_dates.puzzle_1)}}</p>
+                </div>
+                <div class="col-xs-3 rtr-col-3">
+                    <p><span ng-if="duration_times.puzzle_1">{{minutes(duration_times.puzzle_1, true)}}m {{seconds(duration_times.puzzle_1, true)}}s</span></p>
+                </div>
+                <div class="col-xs-3 rtr-col-4">
+                    <p ng-if="answers.puzzle_1">{{answers.puzzle_1}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 rtr-col-1">
+                    <p>{{names.puzzle_2a}}:</p>
+                </div>
+                <div class="col-xs-3 rtr-col-2">
+                    <p>{{pretty(completion_dates.puzzle_2a)}}</p>
+                </div>
+                <div class="col-xs-3 rtr-col-3">
+                    <p><span ng-if="duration_times.puzzle_2a">{{minutes(duration_times.puzzle_2a, true)}}m {{seconds(duration_times.puzzle_2a, true)}}s</span></p>
+                </div>
+                <div class="col-xs-3 rtr-col-4">
+                    <p ng-if="answers.puzzle_2a">{{answers.puzzle_2a}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 rtr-col-1">
+                    <p>{{names.puzzle_2b}}:</p>
+                </div>
+                <div class="col-xs-3 rtr-col-2">
+                    <p>{{pretty(completion_dates.puzzle_2b)}}</p>
+                </div>
+                <div class="col-xs-3 rtr-col-3">
+                    <p><span ng-if="duration_times.puzzle_2b">{{minutes(duration_times.puzzle_2b, true)}}m {{seconds(duration_times.puzzle_2b, true)}}s</span></p>
+                </div>
+                <div class="col-xs-3 rtr-col-4">
+                    <p ng-if="answers.puzzle_2b">{{answers.puzzle_2b}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 rtr-col-1">
+                    <p>{{names.puzzle_2c}}:</p>
+                </div>
+                <div class="col-xs-3 rtr-col-2">
+                    <p>{{pretty(completion_dates.puzzle_2c)}}</p>
+                </div>
+                <div class="col-xs-3 rtr-col-3">
+                    <p><span ng-if="duration_times.puzzle_2c">{{minutes(duration_times.puzzle_2c, true)}}m {{seconds(duration_times.puzzle_2c, true)}}s</span></p>
+                </div>
+                <div class="col-xs-3 rtr-col-4">
+                    <p ng-if="answers.puzzle_2c">{{answers.puzzle_2c}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 rtr-col-1">
+                    <p>{{names.puzzle_3}}:</p>
+                </div>
+                <div class="col-xs-3 rtr-col-2">
+                    <p>{{pretty(completion_dates.puzzle_3)}}</p>
+                </div>
+                <div class="col-xs-3 rtr-col-3">
+                    <p><span ng-if="duration_times.puzzle_3">{{minutes(duration_times.puzzle_3, true)}}m {{seconds(duration_times.puzzle_3, true)}}s</span></p>
+                </div>
+                <div class="col-xs-3 rtr-col-4">
+                    <p ng-if="answers.puzzle_3">{{answers.puzzle_3}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 rtr-col-1">
+                    <p>{{names.puzzle_4a}}:</p>
+                </div>
+                <div class="col-xs-3 rtr-col-2">
+                    <p>{{pretty(completion_dates.puzzle_4a)}}</p>
+                </div>
+                <div class="col-xs-3 rtr-col-3">
+                    <p><span ng-if="duration_times.puzzle_4a">{{minutes(duration_times.puzzle_4a, true)}}m {{seconds(duration_times.puzzle_4a, true)}}s</span></p>
+                </div>
+                <div class="col-xs-3 rtr-col-4">
+                    <p ng-if="answers.puzzle_4a">{{answers.puzzle_4a}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 rtr-col-1">
+                    <p>{{names.puzzle_4b}}:</p>
+                </div>
+                <div class="col-xs-3 rtr-col-2">
+                    <p>{{pretty(completion_dates.puzzle_4b)}}</p>
+                </div>
+                <div class="col-xs-3 rtr-col-3">
+                    <p><span ng-if="duration_times.puzzle_4b">{{minutes(duration_times.puzzle_4b, true)}}m {{seconds(duration_times.puzzle_4b, true)}}s</span></p>
+                </div>
+                <div class="col-xs-3 rtr-col-4">
+                    <p ng-if="answers.puzzle_4b"><span style="color: yellowgreen">P</span> <span style="color: dodgerblue">T</span> <span style="color: darkorange" >K</span> </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 rtr-col-1">
+                    <p>{{names.puzzle_4c}}:</p>
+                </div>
+                <div class="col-xs-3 rtr-col-2">
+                    <p>{{pretty(completion_dates.puzzle_4c)}}</p>
+                </div>
+                <div class="col-xs-3 rtr-col-3">
+                    <p><span ng-if="duration_times.puzzle_4c">{{minutes(duration_times.puzzle_4c, true)}}m {{seconds(duration_times.puzzle_4c, true)}}s</span></p>
+                </div>
+                <div class="col-xs-3 rtr-col-4">
+                    <p ng-if="answers.puzzle_4c">{{answers.puzzle_4c}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 rtr-col-1">
+                    <p>{{names.puzzle_5}}:</p>
+                </div>
+                <div class="col-xs-3 rtr-col-2">
+                    <p>{{pretty(completion_dates.puzzle_5)}}</p>
+                </div>
+                <div class="col-xs-3 rtr-col-3">
+                    <p><span ng-if="duration_times.puzzle_5">{{minutes(duration_times.puzzle_5, true)}}m {{seconds(duration_times.puzzle_5, true)}}s</span></p>
+                </div>
+                <div class="col-xs-3 rtr-col-4">
+                    <p ng-if="answers.puzzle_5">{{answers.puzzle_5}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 rtr-col-1">
+                    <p>{{names.puzzle_6}}:</p>
+                </div>
+                <div class="col-xs-3 rtr-col-2">
+                    <p>{{pretty(completion_dates.puzzle_6)}}</p>
+                </div>
+                <div class="col-xs-3 rtr-col-3">
+                    <p><span ng-if="duration_times.puzzle_6">{{minutes(duration_times.puzzle_6, true)}}m {{seconds(duration_times.puzzle_6, true)}}s</span></p>
+                </div>
+                <div class="col-xs-3 rtr-col-4">
+                    <p ng-if="answers.puzzle_6">{{answers.puzzle_6}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 rtr-col-1">
+                    <p>{{names.puzzle_7}}:</p>
+                </div>
+                <div class="col-xs-3 rtr-col-2">
+                    <p>{{pretty(completion_dates.puzzle_7)}}</p>
+                </div>
+                <div class="col-xs-3 rtr-col-3">
+                    <p><span ng-if="duration_times.puzzle_7">{{minutes(duration_times.puzzle_7, true)}}m {{seconds(duration_times.puzzle_7, true)}}s</span></p>
+                </div>
+                <div class="col-xs-3 rtr-col-4">
+                    <p ng-if="answers.puzzle_7">{{answers.puzzle_7}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 rtr-col-1">
+                    <p>{{names.puzzle_8}}:</p>
+                </div>
+                <div class="col-xs-3 rtr-col-2">
+                    <p>{{pretty(completion_dates.puzzle_8)}}</p>
+                </div>
+                <div class="col-xs-3 rtr-col-3">
+                    <p><span ng-if="duration_times.puzzle_8">{{minutes(duration_times.puzzle_8, true)}}m {{seconds(duration_times.puzzle_8, true)}}s</span></p>
+                </div>
+                <div class="col-xs-3 rtr-col-4">
+                    <p ng-if="answers.puzzle_8">{{answers.puzzle_8}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 rtr-col-1">
+                    <p>End:  {{pretty(end_complete_time)}}</p>
+                </div>
+            </div>
+            <div class="row" style="margin-left: 50px">
+                <div class="col-xs-12 rtr-col-1">
+                    <p>Hint 1:  {{pretty(hint_1_time)}}</p>
+                </div>
+                <div class="col-xs-12 rtr-col-1">
+                    <p>Hint 2:  {{pretty(hint_2_time)}}</p>
+                </div>
+                <div class="col-xs-12 rtr-col-1">
+                    <p>Hint 3:  {{pretty(hint_3_time)}}</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 30px; margin-bottom: 20px">
+                <div class="col-xs-12">
+                    <div style="margin: auto">
+                        <button ng-click="hint_1()" class="rtr-btn btn">Hint 1</button>
+                        <button ng-click="hint_2()" class="rtr-btn btn">Hint 2</button>
+                        <button ng-click="hint_3()" class="rtr-btn btn">Hint 3</button>
+                    </div>
+
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+</div>

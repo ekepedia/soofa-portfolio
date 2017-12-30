@@ -1,0 +1,37 @@
+<h3 class="rtr-puzzle-title">Puzzle 5</h3>
+
+
+<div ng-show="!is_ready">
+    <h1>Have you opened the Cryptex container yet? </h1>
+    <br/>
+    <h2>Click next when you have opened the Cryptex container.</h2>
+    <br/>
+    <button class="btn rtr-btn" ng-click="ready()"> Next </button>
+</div>
+
+<div ng-show="is_ready">
+
+    <h1>
+        Type in all of the unscrambled words' answers in the corresponding text box before hitting enter to receive the pin. </h1>
+    <br/>
+
+    <input class="rtr-text-field" ng-model="answer_1a" type="text"> <span class="rtr-scramle-text">alneeh</span>
+    <input class="rtr-text-field" ng-model="answer_2" type="text"> <span class="rtr-scramle-text">kopeat</span>
+    <input class="rtr-text-field" ng-model="answer_3" type="text"> <span class="rtr-scramle-text">traffonkr</span>
+    <input class="rtr-text-field" ng-model="answer_4" type="text"> <span class="rtr-scramle-text">bumolcus</span>
+    <input class="rtr-text-field" ng-model="answer_5" type="text"> <span class="rtr-scramle-text">lislanhev</span>
+    <input class="rtr-text-field" ng-model="answer_6" type="text"> <span class="rtr-scramle-text">nertont</span>
+    <input class="rtr-text-field" ng-model="answer_7" type="text"> <span class="rtr-scramle-text">ybalna</span>
+
+    <br/>
+    <button class="btn rtr-btn" ng-click="submit_1()"> Submit </button>
+    <h2 class="rtr-answer" ng-if="puzzle_5_answers">Answer: {{puzzle_5_answers}}</h2>
+
+
+    <br/>
+    <h3 ng-show="can_proceed_1" style="color:limegreen">Done <span style="font-size: 20px;" class="glyphicon glyphicon-ok"></span></h3>
+    <br/>
+    <button class="btn rtr-btn" ng-click="back()"> back </button>
+
+    <button class="btn rtr-btn" ng-click="next()"> next </button>
+</div>
