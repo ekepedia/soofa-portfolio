@@ -13,7 +13,7 @@ This is by far the largest codebase in this repo. It contains 3/5 of the microse
 
 This is the code for the SPA I did for [Boston Top 20](http://bostontop20.com) main site. Things to checkout:
 - Templating w/ Angular JS
-- Data Processing (loadlocations.js)
+- Data Processing ([loadlocations.js](https://github.com/ekepedia/soofa-portfolio/blob/master/Boston%20Top%2020/loadlocations.js))
 - SCSS to CSS
 
 ## Raid The Room
