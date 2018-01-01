@@ -10,11 +10,6 @@ var express  = require('express'),
 
 app.set('view engine', 'ejs');
 
-aws.config.update({
-    accessKeyId: "AKIAJEIJ7BVY3346RY6A",
-    secretAccessKey: "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"
-});
-
 app.use(require('express').static(__dirname + '/public'));
 
 var bodyParser = require('body-parser');

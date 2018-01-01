@@ -5,11 +5,6 @@ var aws     = require("aws-sdk"),
     winston = require("winston"),
     fs      = require("fs");
 
-aws.config.update({
-    accessKeyId: "AKIAJ3CTGZRWBL3S5XOQ",
-    secretAccessKey: "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"
-});
-
 module.exports.upload = function (file, callback) {
 
     if(file){
